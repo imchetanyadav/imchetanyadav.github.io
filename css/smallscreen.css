@@ -1,0 +1,64 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #fff;
+    -webkit-transition: margin 0.5s ease-out;
+    transition: margin 0.5s ease-out;
+}
+.section{
+    padding-left: 4%;
+    padding-right: 4%;
+}
+#skills{
+    margin-right: 4%;
+}
+#main-menu{
+    display: none;
+    position: relative;
+}
+#left-menu{
+    display: none;
+    position: relative;
+}
+#resize{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+.hero-text{
+    color: #fff;
+    position: relative;
+    top: 50%;
+    margin-left: 5px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.type{
+    text-align: left;
+}
+#content{
+    display: block;
+}
+
+
+/*---------------
+Media Queries
+---------------*/
+@media only screen and (max-width: 610px){
+    .service-holder{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .service-holder img{
+        margin-top: 10px;
+    }
+    .service-data{
+        margin-top: 0px;
+        margin-left: 5px;
+    }
+    #quality p{
+        font-size: 10px;
+    }
+}
