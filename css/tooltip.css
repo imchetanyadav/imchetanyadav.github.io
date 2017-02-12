@@ -8,7 +8,7 @@
 /* Tooltip text */
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 450%;
+    width: auto;
     top: 100%;
     margin-left: -120%;
     margin-top: 10px;
@@ -16,8 +16,9 @@
     color: #fff;
     font-size: 15px;
     text-align: center;
-    padding: 5px 0;
+    padding: 5px;
     border-radius: 6px;
+    text-transform: lowercase;
  
     /* Position the tooltip text - see examples below! */
     position: absolute;

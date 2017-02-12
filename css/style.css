@@ -25,6 +25,10 @@ body{
 #resize{
     background-color: #ff642f;
 }
+.social-icons a{
+    text-decoration: none;
+    color: #fff;
+}
 /*---------------
 Animations
 ---------------*/
@@ -167,8 +171,7 @@ Quality
 }
 #quality ul li i{
     font-size: 80px;
-    color: rgb(34,158,230);
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 rgba(255, 255, 255, 0.29), 2px 2px 0 rgba(255, 255, 255, 0.29);
+    color: #fff;
 }
 
 @media only screen and (max-width: 970px){

@@ -127,12 +127,12 @@ $(function(){
     });
     
     /* Left Menu Scroll to Selected Section */
-    function scrolltoSection(a){
+    function scrolltoSection(a, b){
         var s = "#" + a;
-        $('html, body').animate({scrollTop: $(s).offset().top -60}, 1000);
+        $('html, body').animate({scrollTop: $(s).offset().top -b}, 1000);
     }
     $('#left #left-menu ul li').click(function () {
-        scrolltoSection($(this).text());
+        scrolltoSection($(this).text(), 60);
     });
     
     /* Skills Section Logo Change */
@@ -187,8 +187,8 @@ $(function(){
         }
     });
     $('.nav-item').on('click',function(){
-        scrolltoSection($(this).text());
         $('.toggle-container').trigger('click');
+        scrolltoSection($(this).text(), 300);
     });
     
     
