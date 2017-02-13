@@ -172,6 +172,17 @@ $(function(){
         showlogo("design");
     });
     
+    var jsonURL = "json/projects.json";
+    $.getJSON(jsonURL, function (json)
+    {
+        var imgList= "";
+        $.each(json.projects, function () {
+            imgList += '<li><img src= "' + this.imgPath + '"></li>';
+        });
+        $('#project-images').append(imgList);
+    });
+
+    
     /* Mobile Menu Toggle */
     var mobilenav = false;
     $('.toggle-container').on('click',function(){
@@ -190,6 +201,5 @@ $(function(){
         $('.toggle-container').trigger('click');
         scrolltoSection($(this).text(), 300);
     });
-    
     
 });

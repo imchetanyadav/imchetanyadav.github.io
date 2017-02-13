@@ -1,0 +1,20 @@
+{
+   "projects": [
+      {
+         "name": "Project 1",
+         "imgPath": "images/portfolio/img.jpg"
+      },
+      {
+         "name": "Project 2",
+         "imgPath": "images/portfolio/img.jpg"
+      },
+      {
+         "name": "Project 3",
+         "imgPath": "images/portfolio/img.jpg"
+      },
+      {
+         "name": "Project 4",
+         "imgPath": "images/portfolio/img.jpg"
+     }
+  ]
+}

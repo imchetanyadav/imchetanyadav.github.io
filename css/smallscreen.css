@@ -42,6 +42,15 @@ body{
     display: block;
 }
 
+.section-title{
+    font-size: 10vw;
+    letter-spacing: -3px;
+    word-spacing: 7px;
+}
+
+#project-images li{
+    width: 50%;
+}
 
 /*---------------
 Media Queries
@@ -49,7 +58,7 @@ Media Queries
 @media only screen and (max-width: 610px){
     .service-holder{
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     .service-holder img{
         margin-top: 10px;
