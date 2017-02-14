@@ -7,12 +7,9 @@ body{
     -webkit-transition: margin 0.5s ease-out;
     transition: margin 0.5s ease-out;
 }
-.section{
+.section-content-holder{
     padding-left: 4%;
     padding-right: 4%;
-}
-#skills{
-    margin-right: 4%;
 }
 #main-menu{
     display: none;
@@ -44,14 +41,23 @@ body{
 
 .section-title{
     font-size: 10vw;
+    font-weight: 700;
     letter-spacing: -3px;
     word-spacing: 7px;
+    padding: 0!important;
 }
 
 #project-images li{
     width: 50%;
 }
-
+/*---------------
+Section titles
+---------------*/
+.section-title{color: white;}
+#about .section-title{background-color: #32DB8A;}
+#services .section-title{background-color: rgb(255, 186, 66);}
+#skills .section-title{background-color: #e64b77;}
+#projects .section-title{background-color: #32DB8A;}
 /*---------------
 Media Queries
 ---------------*/

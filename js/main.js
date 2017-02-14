@@ -107,8 +107,9 @@ $(function(){
                 var s = $($element).parent().attr('id');
                 $('#left #left-menu ul li').css("box-shadow","none");
                 $('#left #left-menu ul li').each(function(){
-                    if($(this).text() === s)
+                    if($(this).text() === s){
                         $(this).css("box-shadow",string);
+                    }
                 });
 
             }
