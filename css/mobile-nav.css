@@ -12,6 +12,9 @@ Mobile Nav
   transition:  0.5s all ease-out;
   z-index: 15;
 }
+.mobile-menu .nav, .mobile-menu #toggle {
+    z-index: 400;
+}
 /* Toggle functionality */
 #toggle {
   display: none;

@@ -74,7 +74,7 @@ $(function(){
 
     /* Typing Animation */
     $(".type").typed({
-        strings: ["i design websites.", "i develop app.", "i am CHETAN YADAV."],
+        strings: ["i design websites.", "i develop apps.", "i am CHETAN."],
         typeSpeed: 0,
         loop: true
     });
@@ -99,12 +99,18 @@ $(function(){
             var element_bottom_position = (element_top_position + element_height);
 
             //check to see if this current container is within viewport
-            if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position))
+            if ((element_bottom_position >= window_top_position) && (element_top_position <= (window_top_position +130)))
             {
                 $element.addClass('in-view');
 
                 // Highlighting li element based on section in viewport 
-                var s = $($element).parent().attr('id');
+                var s = $($element).parent().attr('id'); //getting id of element in view
+                if($window.width()<701){
+                    //var sectionTitleColor = $('#'+s+' .section-title').css("background-color"); //getting section title color in view
+                    $('#'+s+' .section-title').css("position","sticky");
+                    $('#'+s+' .section-title').css("top","0");
+                    //$('.mobile-menu').css("background-color", sectionTitleColor); //setting mobile-menu color to section title color
+                }
                 $('#left #left-menu ul li').css("box-shadow","none");
                 $('#left #left-menu ul li').each(function(){
                     if($(this).text() === s){
@@ -115,6 +121,7 @@ $(function(){
             }
             else{
                 //$element.removeClass('in-view');
+                //$('.mobile-menu').css("background-color", "#ff642f");
             }
         });
     }

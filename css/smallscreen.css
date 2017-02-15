@@ -39,14 +39,29 @@ body{
     display: block;
 }
 
+.section{
+    margin-bottom: 0;
+}
+.section-content-holder{
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+
 .section-title{
+    margin-bottom: 0;
+    margin-top: 0;
+    height: 50px;
     font-size: 10vw;
     font-weight: 700;
     letter-spacing: -3px;
     word-spacing: 7px;
     padding: 0!important;
+    z-index: 250;
 }
 
+#quality{
+    display: none;
+}
 #project-images li{
     width: 50%;
 }
@@ -54,10 +69,10 @@ body{
 Section titles
 ---------------*/
 .section-title{color: white;}
-#about .section-title{background-color: #32DB8A;}
-#services .section-title{background-color: rgb(255, 186, 66);}
-#skills .section-title{background-color: #e64b77;}
-#projects .section-title{background-color: #32DB8A;}
+#about .section-title{background-color: rgb(255, 186, 66);}
+#services .section-title{background-color: #e64b77;}
+#skills .section-title{background-color: #32DB8A;}
+#projects .section-title{background-color: #e64b77;}
 /*---------------
 Media Queries
 ---------------*/
