@@ -6,7 +6,7 @@ Mobile Nav
   width: 100%;
   top: 0px;
   height: 50px;
-  background-color: #ff642f;
+  background-color: rgba(0, 0, 0, 0);
   overflow: hidden;
   -webkit-transition: 0.5s all ease-out, 0.1s background-color linear;
   transition:  0.5s all ease-out, 0.1s background-color linear;

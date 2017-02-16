@@ -1,0 +1,97 @@
+{
+   "webLogo": [
+       {
+         "name": "HTML",
+         "imgPath": "images/svg/web/html.svg"
+       },
+       {
+         "name": "CSS",
+         "imgPath": "images/svg/web/css.svg"
+       },
+       {
+         "name": "Bootstrap",
+         "imgPath": "images/svg/web/bootstrap.svg"
+       },
+       {
+         "name": "Javascript",
+         "imgPath": "images/svg/web/javascript.svg"
+       },
+       {
+         "name": "SASS",
+         "imgPath": "images/svg/web/sass.svg"
+       },
+       {
+         "name": "JQuery",
+         "imgPath": "images/svg/web/jquery.svg"
+       },
+       {
+         "name": "AngularJs",
+         "imgPath": "images/svg/web/angular.svg"
+       }
+   ],
+    
+    "mobileLogo": [
+       {
+         "name": "Android",
+         "imgPath": "images/svg/mobile/android.svg"
+       },
+       {
+         "name": "iOS",
+         "imgPath": "images/svg/mobile/ios.svg"
+       },
+       {
+         "name": "Windows",
+         "imgPath": "images/svg/mobile/windows.svg"
+       },
+       {
+         "name": "IONIC",
+         "imgPath": "images/svg/mobile/ionic.svg"
+       }
+    ],
+    
+    "desktopLogo": [
+       {
+         "name": "C",
+         "imgPath": "images/svg/desktop/c.svg"
+       },
+       {
+         "name": "C++",
+         "imgPath": "images/svg/desktop/c++.svg"
+       },
+       {
+         "name": "Java",
+         "imgPath": "images/svg/desktop/java.svg"
+       },
+       {
+         "name": "MySQL",
+         "imgPath": "images/svg/desktop/mysql.svg"
+       },
+       {
+         "name": "Python",
+         "imgPath": "images/svg/desktop/python.svg"
+       },
+       {
+         "name": "Git",
+         "imgPath": "images/svg/desktop/git.svg"
+       },
+       {
+         "name": "Ubuntu",
+         "imgPath": "images/svg/desktop/ubuntu.svg"
+       }
+    ],
+    
+    "designLogo": [
+       {
+         "name": "Photoshop",
+         "imgPath": "images/svg/design/photoshop.svg"
+       },
+       {
+         "name": "Illustrator",
+         "imgPath": "images/svg/design/illustrator.svg"
+       },
+       {
+         "name": "After Effects",
+         "imgPath": "images/svg/design/aftereffects.svg"
+       }
+    ]
+}

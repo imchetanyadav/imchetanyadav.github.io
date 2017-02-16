@@ -34,7 +34,6 @@ $(function(){
             $("#resize").css("width",rw);
             $("#resize").css("height",rw);
             var mw = w-rw -20;
-            console.log(mw);
             $('#right').css("width",mw);
             $('#right').css("left",rw);
             var s2 = rw;
@@ -122,11 +121,9 @@ $(function(){
             }
             else{
                 //$element.removeClass('in-view');
-                //$('.mobile-menu').css("background-color", "#ff642f");
             }
         });
     }
-    
     /* Left Menu Selected Animation */
     $('#left-menu ul li').on('click',function(){
         $('#left-menu ul li').css("box-shadow","none");
@@ -142,6 +139,32 @@ $(function(){
     }
     $('#left #left-menu ul li').click(function () {
         scrolltoSection($(this).text(), 60);
+    });
+    
+    
+    var jsonSkillsURL = "json/skills.json";
+    $.getJSON(jsonSkillsURL, function (json)
+    {
+        var webLogoList= "";
+        $.each(json.webLogo, function () {
+            webLogoList += '<img src= "' + this.imgPath + '">';
+        });
+        var mobileLogoList= "";
+        $.each(json.mobileLogo, function () {
+            mobileLogoList += '<img src= "' + this.imgPath + '">';
+        });
+        var desktopLogoList= "";
+        $.each(json.desktopLogo, function () {
+            desktopLogoList += '<img src= "' + this.imgPath + '">';
+        });
+        var designLogoList= "";
+        $.each(json.designLogo, function () {
+            designLogoList += '<img src= "' + this.imgPath + '">';
+        });
+        $('.web-logo').append(webLogoList);
+        $('.mobile-logo').append(mobileLogoList);
+        $('.desktop-logo').append(desktopLogoList);
+        $('.design-logo').append(designLogoList);
     });
     
     /* Skills Section Logo Change */
@@ -181,8 +204,8 @@ $(function(){
         showlogo("design");
     });
     
-    var jsonURL = "json/projects.json";
-    $.getJSON(jsonURL, function (json)
+    var jsonProjectsURL = "json/projects.json";
+    $.getJSON(jsonProjectsURL, function (json)
     {
         var imgList= "";
         $.each(json.projects, function () {
@@ -202,7 +225,6 @@ $(function(){
             $(menu).css("background-color", sectionTitleColor);
             $(menu).css("transition", "0.5s all ease-out, 0.1s background-color linear");
             $(menu).css("-webkit-transition", "0.5s all ease-out, 0.1s background-color linear");
-            //$('body').css("margin-top","230px");
         }
         else if(mobilenav === true){
             mobilenav = false;
@@ -210,7 +232,6 @@ $(function(){
             $(menu).css("background-color", "rgba(0, 0, 0, 0)");
             $(menu).css("transition", "0.5s all ease-out, 1s background-color linear");
             $(menu).css("-webkit-transition", "0.5s all ease-out, 1s background-color linear");
-            //$('body').css("margin-top","0px");
         }
     });
     $('.nav-item').on('click',function(){

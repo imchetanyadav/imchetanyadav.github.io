@@ -230,7 +230,7 @@ Skills
     display: none;
 }
 
-.logo svg{
+.logo svg, .logo img{
     width: 50px;
     height: auto;
     margin-right: 2%;
