@@ -8,9 +8,9 @@ Mobile Nav
   height: 50px;
   background-color: #ff642f;
   overflow: hidden;
-  -webkit-transition: 0.5s all ease-out;
-  transition:  0.5s all ease-out;
-  z-index: 15;
+  -webkit-transition: 0.5s all ease-out, 0.1s background-color linear;
+  transition:  0.5s all ease-out, 0.1s background-color linear;
+  z-index: 350;
 }
 .mobile-menu .nav, .mobile-menu #toggle {
     z-index: 400;

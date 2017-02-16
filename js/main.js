@@ -1,13 +1,16 @@
 var string;
+var sectionTitleColor;
 $(function(){
 
     /* Adjust Styling based on screensize */
     function adjustStyle(width){
         if(width<701){
             $('#screen-stylesheet').attr("href","css/smallscreen.css");
+            $('#resize').addClass("animation-element");
         }
         else{
             $('#screen-stylesheet').attr("href","css/largescreen.css");
+            $('#resize').removeClass("animation-element");
         }
     } 
     adjustStyle($(this).width());
@@ -105,12 +108,10 @@ $(function(){
 
                 // Highlighting li element based on section in viewport 
                 var s = $($element).parent().attr('id'); //getting id of element in view
-                if($window.width()<701){
-                    //var sectionTitleColor = $('#'+s+' .section-title').css("background-color"); //getting section title color in view
-                    $('#'+s+' .section-title').css("position","sticky");
-                    $('#'+s+' .section-title').css("top","0");
-                    //$('.mobile-menu').css("background-color", sectionTitleColor); //setting mobile-menu color to section title color
-                }
+                if(s == "left")
+                    sectionTitleColor = "#ff642f"; //getting section title color in view
+                else
+                    sectionTitleColor = $('#'+s+' .section-title').css("background-color"); //getting section title color in view
                 $('#left #left-menu ul li').css("box-shadow","none");
                 $('#left #left-menu ul li').each(function(){
                     if($(this).text() === s){
@@ -193,21 +194,28 @@ $(function(){
     
     /* Mobile Menu Toggle */
     var mobilenav = false;
+    var menu = $('.mobile-menu');
     $('.toggle-container').on('click',function(){
         if(mobilenav === false){
             mobilenav = true;
-            $('.mobile-menu').css("height","280");
-            $('body').css("margin-top","230px");
+            $(menu).css("height","280");
+            $(menu).css("background-color", sectionTitleColor);
+            $(menu).css("transition", "0.5s all ease-out, 0.1s background-color linear");
+            $(menu).css("-webkit-transition", "0.5s all ease-out, 0.1s background-color linear");
+            //$('body').css("margin-top","230px");
         }
         else if(mobilenav === true){
             mobilenav = false;
-            $('.mobile-menu').css("height","54");
-            $('body').css("margin-top","0px");
+            $(menu).css("height","50");
+            $(menu).css("background-color", "rgba(0, 0, 0, 0)");
+            $(menu).css("transition", "0.5s all ease-out, 1s background-color linear");
+            $(menu).css("-webkit-transition", "0.5s all ease-out, 1s background-color linear");
+            //$('body').css("margin-top","0px");
         }
     });
     $('.nav-item').on('click',function(){
         $('.toggle-container').trigger('click');
-        scrolltoSection($(this).text(), 300);
+        scrolltoSection($(this).text(), 0);
     });
     
 });
