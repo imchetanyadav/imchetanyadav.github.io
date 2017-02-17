@@ -141,25 +141,25 @@ $(function(){
         scrolltoSection($(this).text(), 60);
     });
     
-    
+    /* Loading SVG Icons skills */
     var jsonSkillsURL = "json/skills.json";
     $.getJSON(jsonSkillsURL, function (json)
     {
         var webLogoList= "";
         $.each(json.webLogo, function () {
-            webLogoList += '<img src= "' + this.imgPath + '">';
+            webLogoList += '<img src= "' + this.imgPath + '" title="' + this.name + '" alt="' + this.name + '">';
         });
         var mobileLogoList= "";
         $.each(json.mobileLogo, function () {
-            mobileLogoList += '<img src= "' + this.imgPath + '">';
+            mobileLogoList += '<img src= "' + this.imgPath + '" title="' + this.name + '" alt="' + this.name + '">';
         });
         var desktopLogoList= "";
         $.each(json.desktopLogo, function () {
-            desktopLogoList += '<img src= "' + this.imgPath + '">';
+            desktopLogoList += '<img src= "' + this.imgPath + '" title="' + this.name + '" alt="' + this.name + '">';
         });
         var designLogoList= "";
         $.each(json.designLogo, function () {
-            designLogoList += '<img src= "' + this.imgPath + '">';
+            designLogoList += '<img src= "' + this.imgPath + '" title="' + this.name + '" alt="' + this.name + '">';
         });
         $('.web-logo').append(webLogoList);
         $('.mobile-logo').append(mobileLogoList);
@@ -204,12 +204,13 @@ $(function(){
         showlogo("design");
     });
     
+    /* Loading Project Section Images */
     var jsonProjectsURL = "json/projects.json";
     $.getJSON(jsonProjectsURL, function (json)
     {
         var imgList= "";
         $.each(json.projects, function () {
-            imgList += '<li><img src= "' + this.imgPath + '"></li>';
+            imgList += '<li><img src= "' + this.imgPath + '" data-darkbox="' + this.imgPathHR + '" data-darkbox-description="' + this.name + '"></li>';
         });
         $('#project-images').append(imgList);
     });
