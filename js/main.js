@@ -21,6 +21,7 @@ $(function(){
         }
     });
     
+    $('#content').css("display","none");
     /* Adjusting Size of components */
     var h = $(window).height();
     $('#resize').css("height",h);
