@@ -21,7 +21,8 @@ $(function(){
         }
     });
     
-    $('#content').css("display","none");
+    if($(window).width() >= 701)
+        $('#content').css("display","none");
     /* Adjusting Size of components */
     var h = $(window).height();
     $('#resize').css("height",h);
