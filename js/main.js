@@ -150,9 +150,9 @@ $(function(){
     function switchPlatform(){
         setInterval(function(){
             i++;
-            showPlatform(allplatforms[i]);
             if(i===4)
                 i = 0;
+            showPlatform(allplatforms[i]);
         }, 4000);
     }
     switchPlatform();
@@ -176,11 +176,6 @@ $(function(){
         $(platformLogo).css("display","block");
     }
     showPlatform("desktop");
-    
-    $('.platform').on('click',function(){
-        var platform = $(this).attr('id');
-        showPlatform(platform);
-    });
     
     /* Loading SVG Icons skills */
     var jsonSkillsURL = "json/skills.json";
