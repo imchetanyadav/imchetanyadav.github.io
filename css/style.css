@@ -191,7 +191,7 @@ Skills
     background-color: rgba(149, 149, 149, 0.2);
 }
 
-#desktop-pic{
+#desktop{
     position: relative;
     width: 35%;
     height: auto;
@@ -199,7 +199,7 @@ Skills
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
 }
-#mobile-pic{
+#mobile{
     position: absolute;
     width: 15%;
     height: auto;
@@ -208,14 +208,14 @@ Skills
     -webkit-transition: all 1s linear;
     transition: all 1s linear;
 }
-#design-pic{
+#design{
     position: absolute;
     width: 15%;
     height: auto;
     right: 28%;
     top: 16%;
 }
-#web-pic{
+#web{
     position: absolute;
     width: 30%;
     height: auto;
@@ -237,21 +237,21 @@ Skills
 }
 
 @media only screen and (max-width: 970px){
-    #desktop-pic{
+    #desktop{
         width: 65%;
         left: 45%;
     }
-    #mobile-pic{
+    #mobile{
         width: 27%;
         left: 12%;
         top: 80%;
     }
-    #design-pic{
+    #design{
         width: 23%;
         right: 15%;
         top: 18%;
     }
-    #web-pic{
+    #web{
         width: 55%;
         left: 47%;
         top: 68%;

@@ -143,6 +143,45 @@ $(function(){
         scrolltoSection($(this).text(), 60);
     });
     
+    /* Skills Section Logo Change */
+    var allplatforms = ["web", "desktop", "mobile", "design"];
+    var i = 0;
+    //automatically change platform after 4000ms
+    function switchPlatform(){
+        setInterval(function(){
+            i++;
+            showPlatform(allplatforms[i]);
+            if(i===4)
+                i = 0;
+        }, 4000);
+    }
+    switchPlatform();
+    
+    function showPlatform(platformSelected){
+        //set all plaform images to default
+        for(var j = 0; j<4; j++){
+            var id = "#" + allplatforms[j];
+            var img = "images/skills/" + allplatforms[j] + ".png";
+            $(id).attr("src", img);
+            if(allplatforms[j] === platformSelected)
+                i = j;
+        }
+        //changing platform image based on selection
+        var platformid = "#" + platformSelected;
+        var platformgif = "images/skills/" + platformSelected + "_animated.gif";
+        $(platformid).attr("src", platformgif);
+        //changing platform logo based on selection
+        var platformLogo = "." + platformSelected + "-logo";
+        $('.logo').css("display","none");
+        $(platformLogo).css("display","block");
+    }
+    showPlatform("desktop");
+    
+    $('.platform').on('click',function(){
+        var platform = $(this).attr('id');
+        showPlatform(platform);
+    });
+    
     /* Loading SVG Icons skills */
     var jsonSkillsURL = "json/skills.json";
     $.getJSON(jsonSkillsURL, function (json)
@@ -167,43 +206,6 @@ $(function(){
         $('.mobile-logo').append(mobileLogoList);
         $('.desktop-logo').append(desktopLogoList);
         $('.design-logo').append(designLogoList);
-    });
-    
-    /* Skills Section Logo Change */
-    function switchlogo(){
-        var a = ["web", "desktop", "mobile", "design"];
-        var i = 0;
-        setInterval(function(){
-            showlogo(a[i]);
-            i++;
-            if(i===4)
-                i = 0;
-        }, 4000);
-    }
-    function showlogo(a){
-        var s = "." + a + "-logo";
-        $('.logo').css("display","none");
-        $(s).css("display","block");
-    }
-    showlogo("desktop");
-    
-    /* Switch logo of skills section based on platform selected */ 
-    $('#mobile-pic').on('click',function(){
-        $(this).fadeTo(100,0.30, function(){
-            $(this).attr("src","images/mobile.png");
-            //$(this).css("top","83%");
-        }).fadeTo(1500,1);
-        showlogo("mobile");
-    });
-    $('#desktop-pic').on('click',function(){
-        showlogo("desktop");
-        switchlogo();
-    });
-    $('#web-pic').on('click',function(){
-        showlogo("web");
-    });
-    $('#design-pic').on('click',function(){
-        showlogo("design");
     });
     
     /* Loading Project Section Images */
