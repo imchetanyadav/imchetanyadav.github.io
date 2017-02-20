@@ -182,13 +182,19 @@ Quality
 /*---------------
 Skills
 ---------------*/
+.platform{
+    opacity: 0.3;
+}
+.platform-active{
+    opacity: 1;
+}
 .images{
     position: relative;
     overflow: visible;
 }
-.skills-name{
-    margin-top: 15%;
-    background-color: rgba(149, 149, 149, 0.2);
+.images img{
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear;
 }
 
 #desktop{
@@ -223,11 +229,17 @@ Skills
     top: 68%;
 }
 
+
+.skills-name{
+    margin-top: 13%;
+    background-color: rgba(149, 149, 149, 0.2);
+}
 .logo{
     text-align: center;
     padding: 3%;
-    margin-top: 10px;
     display: none;
+    -webkit-animation: fade-in 1s linear;
+    animation: fade-in 1s linear;
 }
 
 .logo img{
@@ -260,7 +272,7 @@ Skills
 }
 
 /*---------------
-Skills
+Projects
 ---------------*/
 #project-images{
     width: 100%;

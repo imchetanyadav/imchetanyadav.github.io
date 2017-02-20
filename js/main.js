@@ -144,7 +144,7 @@ $(function(){
     });
     
     /* Skills Section Logo Change */
-    var allplatforms = ["web", "desktop", "mobile", "design"];
+    var allplatforms = ["mobile", "desktop", "design", "web"];
     var i = 0;
     //automatically change platform after 4000ms
     function switchPlatform(){
@@ -163,6 +163,7 @@ $(function(){
             var id = "#" + allplatforms[j];
             var img = "images/skills/" + allplatforms[j] + ".png";
             $(id).attr("src", img);
+            $(id).removeClass("platform-active");
             if(allplatforms[j] === platformSelected)
                 i = j;
         }
@@ -170,6 +171,7 @@ $(function(){
         var platformid = "#" + platformSelected;
         var platformgif = "images/skills/" + platformSelected + "_animated.gif";
         $(platformid).attr("src", platformgif);
+        $(platformid).addClass("platform-active");
         //changing platform logo based on selection
         var platformLogo = "." + platformSelected + "-logo";
         $('.logo').css("display","none");
