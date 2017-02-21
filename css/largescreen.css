@@ -97,3 +97,10 @@ Header
     padding-left: 10%;
     padding-right: 10%;
 }
+
+.service-holder{
+    height: 10%;
+}
+.service-holder .service-data{
+    vertical-align: top;
+}

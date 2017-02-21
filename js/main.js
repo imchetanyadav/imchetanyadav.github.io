@@ -78,7 +78,7 @@ $(function(){
 
     /* Typing Animation */
     $(".type").typed({
-        strings: ["i design websites.", "i develop apps.", "i am CHETAN."],
+        strings: ["i design websites.", "i develop apps."],
         typeSpeed: 0,
         loop: true
     });
