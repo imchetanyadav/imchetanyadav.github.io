@@ -66,6 +66,7 @@ $(function(){
             $('#left-menu').css("display","block");
             $('#left-menu').css("animation-play-state","running");
             $('#main-menu').css("display","none");
+            $('.hero-text').css("top","33%");
         }, 500);
         setTimeout(function(){
             $('#content').css("display","block");
@@ -108,8 +109,8 @@ $(function(){
                 $element.addClass('in-view');
 
                 // Highlighting li element based on section in viewport 
-                var s = $($element).parent().attr('id'); //getting id of element in view
-                if(s == "left")
+                var s = $($element).closest(".section").attr('id'); //getting id of element in view
+                if(s === undefined)
                     sectionTitleColor = "#ff642f"; //getting section title color in view
                 else
                     sectionTitleColor = $('#'+s+' .section-title').css("background-color"); //getting section title color in view
@@ -122,7 +123,7 @@ $(function(){
 
             }
             else{
-                //$element.removeClass('in-view');
+                $element.removeClass('in-view');
             }
         });
     }
