@@ -1,3 +1,8 @@
+@font-face{
+    font-family: Anders;
+    src: url("../fonts/Anders.ttf") format("truetype");
+}
+
 html{
     color: "#fff";
     font-family: 'Lato', 'Arial', sans-serif;
@@ -124,6 +129,7 @@ Content
     margin-bottom: 8%;
 }
 .section-title{
+    font-family: 'Anders', 'Lato', 'Arial', sans-serif;
     text-align: center;
     margin-bottom: 8%;
     margin-top: 8%;
@@ -173,6 +179,8 @@ Services
     margin-top: 15%;
 }
 .service-holder .service-data .service-title{
+    font-family: 'Anders', 'Lato', 'Arial', sans-serif;
+    font-weight: bold;
     color: #d83f08;
     font-size: 24px;
     padding-bottom: 10px;

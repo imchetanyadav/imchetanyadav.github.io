@@ -144,6 +144,14 @@ $(function(){
         scrolltoSection($(this).text(), 60);
     });
     
+    /* Desktop Main Menu Scroll to Selected Section */
+    $('#right #main-menu ul li').click(function () {
+        var selected = $(this).text().toLowerCase();
+        setTimeout(function(){
+            scrolltoSection(selected, 60);
+        }, 1600);
+    });
+    
     /* Skills Section Logo Change */
     var allplatforms = ["mobile", "desktop", "design", "web"];
     var i = 0;
