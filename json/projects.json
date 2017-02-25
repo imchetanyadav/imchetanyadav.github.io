@@ -2,31 +2,11 @@
    "projects": [
       {
          "name": "Project 1",
-         "imgPath": "images/portfolio/img.jpg",
-         "imgPathHR": "https://unsplash.it/1200/800?image=946"
+         "imgPath": "images/portfolio/pic11.png",
+         "imgPathHR": "images/portfolio/pic11.png"
       },
       {
          "name": "Project 2",
-         "imgPath": "images/portfolio/img.jpg",
-         "imgPathHR": "https://unsplash.it/1200/800?image=961"
-      },
-      {
-         "name": "Project 3",
-         "imgPath": "images/portfolio/img.jpg",
-         "imgPathHR": "https://unsplash.it/1200/800?image=946"
-      },
-      {
-         "name": "Project 4",
-         "imgPath": "images/portfolio/img.jpg",
-         "imgPathHR": "https://unsplash.it/1200/800?image=961"
-      },
-      {
-         "name": "Project 5",
-         "imgPath": "images/portfolio/img.jpg",
-         "imgPathHR": "https://unsplash.it/1200/800?image=946"
-      },
-      {
-         "name": "Project 6",
          "imgPath": "images/portfolio/img.jpg",
          "imgPathHR": "https://unsplash.it/1200/800?image=961"
      }
