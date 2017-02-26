@@ -1,14 +1,14 @@
 {
    "projects": [
       {
-         "name": "Project 1",
-         "imgPath": "images/portfolio/pic11.png",
-         "imgPathHR": "images/portfolio/pic11.png"
+         "name": "Login Page <br><a href='https://imchetanyadav.github.io/LoginPage/'>View Live Version</a>",
+         "imgPath": "images/projects/login.png",
+         "imgPathHR": "images/projects/loginHR.png"
       },
       {
-         "name": "Project 2",
-         "imgPath": "images/portfolio/img.jpg",
-         "imgPathHR": "https://unsplash.it/1200/800?image=961"
+         "name": "One Page Education Site",
+         "imgPath": "images/projects/edu.png",
+         "imgPathHR": "images/projects/eduHR.png"
      }
   ]
 }

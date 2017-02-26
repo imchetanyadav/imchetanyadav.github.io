@@ -225,9 +225,13 @@ Skills
 ---------------*/
 .platform{
     opacity: 0.3;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 .platform-active{
     opacity: 1;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
 }
 .images{
     position: relative;
@@ -320,15 +324,22 @@ Projects
 #project-images{
     width: 100%;
     padding: 0;
-    overflow: hidden;
+    overflow: visible;
 }
 #project-images li{
     width: 100%;
     height: auto;
-    float: left;
     list-style: none;
 }
 #project-images li img{
     width: 100%;
     height: auto;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+#project-images li img:hover{
+    z-index: 110;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
