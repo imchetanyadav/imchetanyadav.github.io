@@ -2,6 +2,10 @@
     font-family: Anders;
     src: url("../fonts/Anders.ttf") format("truetype");
 }
+.anders{
+    font-family: 'Anders', 'Lato', 'Arial', sans-serif;
+    font-weight: bold;
+}
 
 html{
     color: "#fff";
@@ -129,7 +133,6 @@ Content
     margin-bottom: 8%;
 }
 .section-title{
-    font-family: 'Anders', 'Lato', 'Arial', sans-serif;
     text-align: center;
     margin-bottom: 8%;
     margin-top: 8%;
@@ -179,7 +182,6 @@ Services
     margin-top: 15%;
 }
 .service-holder .service-data .service-title{
-    font-family: 'Anders', 'Lato', 'Arial', sans-serif;
     font-weight: bold;
     color: #d83f08;
     font-size: 24px;
@@ -277,8 +279,6 @@ Skills
 
 .skills-name{
     margin-top: 13%;
-    /*border: 2px solid #e64b77;
-    border-radius: 12px;*/
     background-color: rgba(149, 149, 149, 0.2);
 }
 .logo{
@@ -342,4 +342,85 @@ Projects
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+/*---------------
+Page Loading Screen
+---------------*/
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #3498db;
+
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #e74c3c;
+
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #f9c922;
+
+    -webkit-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0%   { 
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   { 
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }

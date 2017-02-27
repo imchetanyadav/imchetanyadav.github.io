@@ -1,5 +1,13 @@
 var string;
 var sectionTitleColor;
+
+//Hide loader when page loading completes
+$(window).ready(function() {
+    setTimeout(function(){
+        $('#loader-wrapper').css("display","none");
+    }, 500);
+});
+
 $(function(){
 
     /* Adjust Styling based on screensize */
@@ -104,7 +112,7 @@ $(function(){
             var element_bottom_position = (element_top_position + element_height);
 
             //check to see if this current container is within viewport
-            if ((element_bottom_position >= window_top_position) && (element_top_position <= (window_bottom_position + 100)))
+            if ((element_bottom_position >= window_top_position) && (element_top_position <= (window_bottom_position + 80)))
             {
                 $element.addClass('in-view');
 

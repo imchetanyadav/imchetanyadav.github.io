@@ -2,7 +2,6 @@
 .tooltip {
     position: relative;
     display: inline-block;
-    /* border-bottom: 1px dotted black;  If you want dots under the hoverable text */
 }
 
 /* Tooltip text */
@@ -30,7 +29,7 @@
     content: " ";
     position: absolute;
     bottom: 100%; 
-    left: 15%;
+    left: 8%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
