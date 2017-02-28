@@ -124,9 +124,6 @@ Animations
 /*---------------
 Content
 ---------------*/
-#content{
-    /*display: none;*/
-}
 .section{
     margin-left: auto;
     margin-right: auto;
@@ -189,37 +186,6 @@ Services
 }
 @media only screen and (max-width: 353px){
     .service-holder .service-img {width: 13%;}
-}
-
-/*---------------
-Quality
----------------*/
-#quality{
-    color: #fff;
-    background-color: rgb(34,158,230);
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
-#quality ul{
-    padding-left: 0px;
-    text-align: center;
-}
-#quality ul li{
-    font-size: 15px;
-    list-style: none;
-    display: inline-block;
-    vertical-align: top;
-    width: 19%;
-}
-#quality ul li i{
-    font-size: 80px;
-    color: #fff;
-}
-
-@media only screen and (max-width: 970px){
-    #quality ul li i{
-        font-size: 40px;
-    }
 }
 
 /*---------------

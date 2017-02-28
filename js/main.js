@@ -1,15 +1,14 @@
 var string;
 var sectionTitleColor;
 
-//Hide loader when page loading completes
-$(window).ready(function() {
+$(function(){
+
+    //Hide loader when page loading completes
     setTimeout(function(){
         $('#loader-wrapper').css("display","none");
     }, 500);
-});
-
-$(function(){
-
+    $('.noJSmsg').css("display","none");
+    
     /* Adjust Styling based on screensize */
     function adjustStyle(width){
         if(width<701){
@@ -17,6 +16,7 @@ $(function(){
             $('#resize').addClass("animation-element");
         }
         else{
+            $('#content').css("display","none");
             $('#screen-stylesheet').attr("href","css/largescreen.css");
             $('#resize').removeClass("animation-element");
         }
@@ -29,8 +29,6 @@ $(function(){
         }
     });
     
-    if($(window).width() >= 701)
-        $('#content').css("display","none");
     /* Adjusting Size of components */
     var h = $(window).height();
     $('#resize').css("height",h);
