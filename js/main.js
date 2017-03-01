@@ -16,11 +16,14 @@ $(function(){
             $('#resize').addClass("animation-element");
         }
         else{
-            $('#content').css("display","none");
             $('#screen-stylesheet').attr("href","css/largescreen.css");
             $('#resize').removeClass("animation-element");
         }
     } 
+    
+    if($(window).width()>701)
+        $('#content').css("display","none");
+        
     adjustStyle($(this).width());
     $(window).resize(function(){
         adjustStyle($(this).width());
@@ -30,29 +33,29 @@ $(function(){
     });
     
     /* Adjusting Size of components */
-    var h = $(window).height();
-    $('#resize').css("height",h);
-    $('#main-menu').css("height",h);
+    var windowHeight = $(window).height();
+    $('#resize').css("height",windowHeight);
+    $('#main-menu').css("height",windowHeight);
 
     function specifysize(){
-        var w = $(window).width();
-        var rw = (w*18)/100;
+        var windowWidth = $(window).width();
+        var resizeIdWidth = (windowWidth * 18) / 100;
         var s1 = "inset ";
-        if(rw>225){
-            $("#resize").css("width",rw);
-            $("#resize").css("height",rw);
-            var mw = w-rw -20;
-            $('#right').css("width",mw);
-            $('#right').css("left",rw);
-            var s2 = rw;
+        if(resizeIdWidth > 225){
+            $("#resize").css("width",resizeIdWidth);
+            $("#resize").css("height",resizeIdWidth);
+            var contentWidth = windowWidth - resizeIdWidth -20;
+            $('#right').css("width",contentWidth);
+            $('#right').css("left",resizeIdWidth);
+            var s2 = resizeIdWidth;
             var s3 = "px 0 0 0 rgba(126, 126, 126, 0.21)";
             string = s1.concat(s2,s3);
         }
         else{
             $("#resize").css("width","225");
             $("#resize").css("height","225");
-            var mw = w-225;
-            $('#right').css("width",mw);
+            var contentWidth = windowWidth - 225;
+            $('#right').css("width",contentWidth);
             $('#right').css("left","225px");
             var s3 = "225px 0 0 0 rgba(126, 126, 126, 0.21)";
             string = s1.concat(s3);
@@ -110,7 +113,7 @@ $(function(){
             var element_bottom_position = (element_top_position + element_height);
 
             //check to see if this current container is within viewport
-            if ((element_bottom_position >= window_top_position) && (element_top_position <= (window_bottom_position + 80)))
+            if ((element_bottom_position >= (window_top_position - 80)) && (element_top_position <= (window_bottom_position + 80)))
             {
                 $element.addClass('in-view');
 

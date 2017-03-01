@@ -14,8 +14,8 @@
     color: #fff;
     background-color: red;
     opacity: 0;
-    -webkit-animation: fade-in 1s 3s linear;
-    animation: fade-in 1s 3s linear;
+    -webkit-animation: fade-in 1s 10s linear;
+    animation: fade-in 1s 10s linear;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
