@@ -7,17 +7,10 @@ body{
     -webkit-transition: margin 0.5s ease-out;
     transition: margin 0.5s ease-out;
 }
+#main-menu{ display: none;}
 .section-content-holder{
     padding-left: 4%;
     padding-right: 4%;
-}
-#main-menu{
-    display: none;
-    position: relative;
-}
-#left-menu{
-    display: none;
-    position: relative;
 }
 #resize{
     width: 100%;
@@ -63,10 +56,6 @@ body{
     position: sticky;
     top: 0;
 }
-
-#quality{
-    display: none;
-}
 #project-images li{
     width: 100%;
 }
@@ -74,9 +63,9 @@ body{
 Section titles
 ---------------*/
 .section-title{color: white;}
-#about .section-title{background-color: rgb(255, 186, 66);}
+#about .section-title{background-color: #e64b77;}
 #services .section-title{background-color: #f27447;}
-#skills .section-title{background-color: #e64b77;}
+#skills .section-title{background-color: rgb(255, 186, 66);}
 #projects .section-title{background-color: #32DB8A;}
 
 /*---------------
@@ -90,14 +79,11 @@ Media Queries
     .service-data{
         margin-left: 5px;
     }
-    #quality p{
-        font-size: 10px;
-    }
 }
 
 .skills-name{
     height: 96px;
-    margin-top: 20%;
+    margin-top: 25%;
     position: relative;
 }
 .logo{
@@ -114,10 +100,11 @@ Media Queries
 Mobile Nav
 ---------------*/
 .mobile-menu {
+  display: block !important;
   position: fixed;
   width: 100%;
   top: 0px;
-  height: 50px;
+  height: 55px;
   background-color: rgba(0, 0, 0, 0);
   overflow: hidden;
   -webkit-transition: 0.5s all ease-out, 0.1s background-color linear;

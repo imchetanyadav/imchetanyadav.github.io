@@ -3,6 +3,7 @@ Darkbox
 */
 [data-darkbox]{ /* add cursor to clickable darkbox items */
     cursor:pointer;
+    -webkit-backface-visibility:hidden;
     backface-visibility:hidden;
 }
 #darkbox{
@@ -34,6 +35,8 @@ Darkbox
 #darkbox_prev,
 #darkbox_next{
     cursor:pointer;
+    -moz-user-select:none;
+    -ms-user-select:none;
     user-select:none;
     -webkit-user-select:none;
     position:absolute;
@@ -52,16 +55,10 @@ Darkbox
 }
 #darkbox_prev{
     left: -2px;
-    -o-transform: rotate(-135deg);
-    -ms-transform: rotate(-135deg);
-    -moz-transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
     transform: rotate(-135deg);
 }
 #darkbox_next{
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     right: -2px;
@@ -79,3 +76,11 @@ Darkbox
     font-weight:bold;
 }
 #darkbox sub{font-size:10px;}
+
+@media only screen and (max-width: 701px){
+    #darkbox_prev,
+    #darkbox_next{
+        width: 20px;
+        height: 20px;
+    }
+}

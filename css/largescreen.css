@@ -1,9 +1,6 @@
 /*---------------
 Header
 ---------------*/
-.mobile-menu{
-    display: none;
-}
 #resize{
     position: relative;
     float: left;
@@ -15,7 +12,7 @@ Header
 }
 .hero-text{
     position: relative;
-    font-size: 20px;
+    font-size: 1em;
     top: 50%;
     margin-left: 10px;
     font-weight: 300;
@@ -43,6 +40,9 @@ Header
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     -webkit-transition: all 1s cubic-bezier(.32,.15,.24,.27);
     transition: all 1s cubic-bezier(.32,.15,.24,.27);
+}
+#main-menu{
+    display: block;
 }
 #main-menu ul{
     position: fixed;

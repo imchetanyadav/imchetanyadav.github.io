@@ -80,7 +80,7 @@ $(function(){
         setTimeout(function(){
             $('#content').css("display","block");
             $('#left').css("position","fixed");
-        }, 1200);
+        }, 1500);
     }
     $('#main-menu ul li').on('click', function(){
         viewContent();
@@ -248,7 +248,7 @@ $(function(){
         }
         else if(mobilenav === true){
             mobilenav = false;
-            $(menu).css("height","50");
+            $(menu).css("height","55");
             $(menu).css("background-color", "rgba(0, 0, 0, 0)");
             $(menu).css("transition", "0.5s all ease-out, 1s background-color linear");
             $(menu).css("-webkit-transition", "0.5s all ease-out, 1s background-color linear");

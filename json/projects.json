@@ -1,7 +1,7 @@
 {
    "projects": [
       {
-         "name": "Login Page <br><a href='https://imchetanyadav.github.io/LoginPage/'>View Live Version</a>",
+         "name": "Login Page <br><a href='https://imchetanyadav.github.io/LoginPage/' target='_blank'>View Live Version</a>",
          "imgPath": "images/projects/login.png",
          "imgPathHR": "images/projects/loginHR.png"
       },
