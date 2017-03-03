@@ -120,7 +120,7 @@ $(function(){
                 // Highlighting li element based on section in viewport 
                 var s = $($element).closest(".section").attr('id'); //getting id of element in view
                 if(s === undefined)
-                    sectionTitleColor = "#ff642f"; //getting section title color in view
+                    sectionTitleColor = "#3C385E"; //getting section title color in view
                 else
                     sectionTitleColor = $('#'+s+' .section-title').css("background-color"); //getting section title color in view
                 $('#left #left-menu ul li').css("box-shadow","none");

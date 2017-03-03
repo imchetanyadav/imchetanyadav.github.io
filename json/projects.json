@@ -1,12 +1,12 @@
 {
    "projects": [
       {
-         "name": "Login Page <br><a href='https://imchetanyadav.github.io/LoginPage/' target='_blank'>View Live Version</a>",
+         "name": "Login Page <br> A simple login page with loading screen<br>View <a href='https://imchetanyadav.github.io/LoginPage/' target='_blank'>Live Version</a> or <a href='https://github.com/imchetanyadav/LoginPage' target='_blank'>Source Code</a>",
          "imgPath": "images/projects/login.png",
          "imgPathHR": "images/projects/loginHR.png"
       },
       {
-         "name": "One Page Education Site",
+         "name": "One Page Education Site <br> One page education site with about, gallery, courses, message and contact section<br>View <a href='https://imchetanyadav.github.io/OnePageEducationSite/' target='_blank'>Live Version</a> or <a href='https://github.com/imchetanyadav/OnePageEducationSite' target='_blank'>Source Code</a>",
          "imgPath": "images/projects/edu.png",
          "imgPathHR": "images/projects/eduHR.png"
      }
