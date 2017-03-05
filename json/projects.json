@@ -1,14 +1,19 @@
 {
    "projects": [
       {
-         "name": "Login Page <br> A simple login page with loading screen<br>View <a href='https://imchetanyadav.github.io/LoginPage/' target='_blank'>Live Version</a> or <a href='https://github.com/imchetanyadav/LoginPage' target='_blank'>Source Code</a>",
+         "name": "<h3>Login Page</h3> <br> A simple login page with loading screen<br>View <a href='https://imchetanyadav.github.io/LoginPage/' target='_blank'>Live Version</a> or <a href='https://github.com/imchetanyadav/LoginPage' target='_blank'>Source Code</a>",
          "imgPath": "images/projects/login.png",
-         "imgPathHR": "images/projects/loginHR.png"
+         "imgPathHR": "images/projects/loginBR.png"
       },
       {
-         "name": "One Page Education Site <br> One page education site with about, gallery, courses, message and contact section<br>View <a href='https://imchetanyadav.github.io/OnePageEducationSite/' target='_blank'>Live Version</a> or <a href='https://github.com/imchetanyadav/OnePageEducationSite' target='_blank'>Source Code</a>",
+         "name": "<h3>The NorthCap University</h3> <br> One page education site with about, gallery, courses, message and contact section<br>View <a href='https://imchetanyadav.github.io/OnePageEducationSite/' target='_blank'>Live Version</a> or <a href='https://github.com/imchetanyadav/OnePageEducationSite' target='_blank'>Source Code</a>",
          "imgPath": "images/projects/edu.png",
-         "imgPathHR": "images/projects/eduHR.png"
+         "imgPathHR": "images/projects/eduBR.png"
+     },
+      {
+         "name": "<h3>Appointment System</h3> <br> Online appointment system for teacher and students with search and chat functionality<br>View <a href='https://imchetanyadav.github.io/AppointmentSystem/' target='_blank'>Live Version</a> or <a href='https://github.com/imchetanyadav/AppointmentSystem' target='_blank'>Source Code</a>",
+         "imgPath": "images/projects/appoint.png",
+         "imgPathHR": "images/projects/appointBR.png"
      }
   ]
 }

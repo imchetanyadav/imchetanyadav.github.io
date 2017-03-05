@@ -311,6 +311,9 @@ Projects
     transform: scale(1.05);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
+#darkbox-description h3{
+    margin: 0;
+}
 
 /*---------------
 Page Loading Screen
