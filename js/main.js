@@ -20,10 +20,7 @@ $(function(){
             $('#resize').removeClass("animation-element");
         }
     } 
-    
-    if($(window).width()>701)
-        $('#content').css("display","none");
-        
+
     adjustStyle($(this).width());
     $(window).resize(function(){
         adjustStyle($(this).width());
@@ -35,7 +32,7 @@ $(function(){
     /* Adjusting Size of components */
     var windowHeight = $(window).height();
     $('#resize').css("height",windowHeight);
-    $('#main-menu').css("height",windowHeight);
+    $('#right').css("height",windowHeight);
 
     function specifysize(){
         var windowWidth = $(window).width();
@@ -78,7 +75,7 @@ $(function(){
             $('.hero-text').css("top","33%");
         }, 500);
         setTimeout(function(){
-            $('#content').css("display","block");
+            $('.section').css("display","block");
             $('#left').css("position","fixed");
         }, 1500);
     }

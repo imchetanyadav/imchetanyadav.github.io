@@ -32,7 +32,6 @@ body{
     text-decoration: none;
 }
 #resize{
-    /*background-color: #ff642f;*/
     background: -webkit-linear-gradient(#3C385E,#E26F92);
     background: linear-gradient(#3C385E,#E26F92);
 }
@@ -310,6 +309,10 @@ Projects
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+#darkbox-description{
+    font-weight: 600;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000 !important;
 }
 #darkbox-description h3{
     margin: 0;
