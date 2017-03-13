@@ -24,6 +24,10 @@ $(function(){
             $('#resize').addClass("animation-element");
         }
         else{
+            $('#loader-wrapper').css("display","block");
+            setTimeout(function(){
+                $('#loader-wrapper').css("display","none");
+            }, 500);
             $('#screen-stylesheet').attr("href","css/largescreen.css");
             $('#resize').removeClass("animation-element");
         }
@@ -31,10 +35,6 @@ $(function(){
 
     adjustStyle($(this).width());
     $(window).resize(function(){
-        $('#loader-wrapper').css("display","block");
-        setTimeout(function(){
-            $('#loader-wrapper').css("display","none");
-        }, 500);
         adjustStyle($(this).width());
         if(content === true){
             specifysize();
@@ -48,6 +48,7 @@ $(function(){
     var right = document.getElementById('right');
     var rightcollapsed, rightexpanded;
     var s1 = "inset ";
+    $(resize).css("height",windowHeight);
 
     function specifysize(){  
         
