@@ -4,9 +4,16 @@ Header
 #resize{
     position: relative;
     float: left;
-    width: 50%;
     margin: 0;
     padding: 0;
+    -webkit-transition: all 1s cubic-bezier(.32,.15,.24,.27);
+    transition: all 1s cubic-bezier(.32,.15,.24,.27);
+}
+#resize.initial{
+    width: 50%;
+    height: 100vh;
+}
+#resize.transition{
     -webkit-transition: all 1s cubic-bezier(.32,.15,.24,.27);
     transition: all 1s cubic-bezier(.32,.15,.24,.27);
 }
@@ -34,10 +41,14 @@ Header
 #right{
     position: absolute;
     float: left;
-    left: 50%;
-    width: 50%;
     z-index: 10;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+#right.initial{
+    left: 50%;
+    width: 50%;
+}
+#right.transition{
     -webkit-transition: all 1s cubic-bezier(.32,.15,.24,.27);
     transition: all 1s cubic-bezier(.32,.15,.24,.27);
 }
@@ -104,4 +115,8 @@ Header
 }
 .service-holder .service-data{
     vertical-align: top;
+}
+
+.code{
+    display: none;
 }

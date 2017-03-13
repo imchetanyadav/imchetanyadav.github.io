@@ -1,13 +1,21 @@
 var string;
 var sectionTitleColor;
 
-$(function(){
-
+var callback = function(){
     //Hide loader when page loading completes
     setTimeout(function(){
         $('#loader-wrapper').css("display","none");
-    }, 500);
+    }, 800);
     $('.noJSmsg').css("display","none");
+};
+
+if ( document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll)) {
+    callback();
+} else {
+    document.addEventListener("DOMContentLoaded", callback);
+}
+
+$(function(){
     
     /* Adjust Styling based on screensize */
     function adjustStyle(width){
@@ -23,6 +31,10 @@ $(function(){
 
     adjustStyle($(this).width());
     $(window).resize(function(){
+        $('#loader-wrapper').css("display","block");
+        setTimeout(function(){
+            $('#loader-wrapper').css("display","none");
+        }, 500);
         adjustStyle($(this).width());
         if(content === true){
             specifysize();
@@ -31,55 +43,86 @@ $(function(){
     
     /* Adjusting Size of components */
     var windowHeight = $(window).height();
-    $('#resize').css("height",windowHeight);
-    $('#right').css("height",windowHeight);
+    var resize = document.getElementById('resize');
+    var resizecollapsed, resizeexpanded;
+    var right = document.getElementById('right');
+    var rightcollapsed, rightexpanded;
+    var s1 = "inset ";
 
-    function specifysize(){
+    function specifysize(){  
+        
         var windowWidth = $(window).width();
+        var halfWindowWidth = windowWidth/2;
         var resizeIdWidth = (windowWidth * 18) / 100;
-        var s1 = "inset ";
-        if(resizeIdWidth > 225){
-            $("#resize").css("width",resizeIdWidth);
-            $("#resize").css("height",resizeIdWidth);
-            var contentWidth = windowWidth - resizeIdWidth -20;
-            $('#right').css("width",contentWidth);
-            $('#right').css("left",resizeIdWidth);
-            var s2 = resizeIdWidth;
-            var s3 = "px 0 0 0 rgba(126, 126, 126, 0.21)";
-            string = s1.concat(s2,s3);
+        if(resizeIdWidth < 225){
+            resizeIdWidth = 225;
         }
-        else{
-            $("#resize").css("width","225");
-            $("#resize").css("height","225");
-            var contentWidth = windowWidth - 225;
-            $('#right').css("width",contentWidth);
-            $('#right').css("left","225px");
-            var s3 = "225px 0 0 0 rgba(126, 126, 126, 0.21)";
-            string = s1.concat(s3);
-        }
+            
+        resizeexpanded = resize.getBoundingClientRect();
+        $(resize).css("width",resizeIdWidth);
+        $(resize).css("height",resizeIdWidth);
+        resizecollapsed = resize.getBoundingClientRect();
+        $(resize).addClass('transition');
+        transform(resize, resizecollapsed, resizeexpanded);
+
+        var contentWidth = windowWidth - resizeIdWidth -10;
+        $(right).css("width",halfWindowWidth);
+        rightcollapsed = right.getBoundingClientRect();
+        $(right).css("width",contentWidth);
+        $(right).css("left",resizeIdWidth);
+        rightexpanded = right.getBoundingClientRect();
+        $(right).addClass('transition');
+        transform(right, rightcollapsed, rightexpanded);
+
+        var s2 = resizeIdWidth;
+        var s3 = "px 0 0 0 rgba(126, 126, 126, 0.21)";
+        string = s1.concat(s2,s3);
         $('#left-menu ul li.active').css("box-shadow",string);
+        animation = true;
+    }
+    function transform(elem, elemcollapsed, elemexpanded){
+        var invertedTop = elemcollapsed.top - elemexpanded.top;
+        var invertedLeft = elemcollapsed.left - elemexpanded.left;
+        var invertedWidth = elemcollapsed.width / elemexpanded.width;
+        var invertedHeight = elemcollapsed.height / elemexpanded.height;
+
+        elem.style.transformOrigin = 'top left';
+
+        elem.style.transform = 'translate(' + invertedLeft + 'px, ' + invertedTop + 'px) scaleX(' + invertedWidth + ') scaleY(' + invertedHeight + ')';
+
+        elem.addEventListener('transitionend', function handler(event) {
+            elem.style.transform = '';
+            elem.style.transformOrigin = '';
+            elem.classList.remove('transition');
+            elem.classList.remove('initial');
+            elem.classList.add('final');
+            elem.removeEventListener('transitionend', handler);  
+        });
     }
 
     /* Main Content Toggle */
     var content = false;
+    var animation = false;
     function viewContent(){
         content = true;
-        specifysize();
-        $('#main-menu ul li').css("animation-play-state","running");
-        $('.hero-text').css("animation-play-state","running");
-        setTimeout(function(){
-            $('#right').css("height","auto");
-            $('#left-menu').css("display","block");
-            $('#left-menu').css("animation-play-state","running");
-            $('#main-menu').css("display","none");
-            $('.hero-text').css("top","33%");
-        }, 500);
-        setTimeout(function(){
-            $('.section').css("display","block");
-            $('#left').css("position","fixed");
-        }, 1500);
+        if(animation === true){
+            $('#main-menu ul li').css("animation-play-state","running");
+            $('.hero-text').css("animation-play-state","running");
+            setTimeout(function(){
+                $('#left-menu').css("display","block");
+                $('#left-menu').css("animation-play-state","running");
+                $('#main-menu').css("display","none");
+                $('.hero-text').css("top","33%");
+            }, 500);
+            setTimeout(function(){
+                $('.section').css("display","block");
+                $('.code').css("display","block");
+                $('#left').css("position","fixed");
+            }, 1500);
+        }
     }
     $('#main-menu ul li').on('click', function(){
+        specifysize();
         viewContent();
     });
 
