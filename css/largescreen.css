@@ -2,26 +2,25 @@
 Header
 ---------------*/
 #resize{
-    position: relative;
     float: left;
     margin: 0;
     padding: 0;
-    -webkit-transition: all 1s cubic-bezier(.32,.15,.24,.27);
-    transition: all 1s cubic-bezier(.32,.15,.24,.27);
 }
 #resize.initial{
     width: 50%;
     height: 100vh;
 }
 #resize.transition{
-    -webkit-transition: all 1s cubic-bezier(.32,.15,.24,.27);
-    transition: all 1s cubic-bezier(.32,.15,.24,.27);
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear;
 }
+@-webkit-keyframes hero-txt{ to{font-size: 0.5em;} }
+@keyframes hero-txt{ to{font-size: 0.5em;} }
 .hero-text{
     position: relative;
     font-size: 1em;
     top: 50%;
-    margin-left: 10px;
+    margin-left: 3%;
     font-weight: 300;
     text-transform: uppercase;
     -webkit-transform: translateY(-50%);
@@ -30,8 +29,8 @@ Header
     letter-spacing: 1px;
     word-spacing: 3px;
     color: white;
-    -webkit-animation: slide-up 0.7s ease-in, fade-out 0.6s ease-in, slide-down 0.6s 0.63s ease-out, fade-in 0.4s 0.73s ease-out, hero-txt 0.8s ease-in;
-    animation: slide-up 0.7s ease-in, fade-out 0.6s ease-in, slide-down 0.6s 0.63s ease-out, fade-in 0.4s 0.73s ease-out, hero-txt 0.8s ease-in;
+    -webkit-animation: hero-txt 0.8s ease-in;
+    animation: hero-txt 0.8s ease-in;
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
     -webkit-animation-fill-mode: forwards;
@@ -49,8 +48,8 @@ Header
     width: 50%;
 }
 #right.transition{
-    -webkit-transition: all 1s cubic-bezier(.32,.15,.24,.27);
-    transition: all 1s cubic-bezier(.32,.15,.24,.27);
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear;
 }
 #main-menu{
     display: block;
@@ -82,8 +81,6 @@ Header
     display: none;
     -webkit-animation: fade-in 0.7s ease-in;
     animation: fade-in 0.7s ease-in;
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
 }
 #left-menu ul{
     padding-left: 0px;
