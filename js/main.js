@@ -90,7 +90,6 @@ $(function(){
         $(resize).css("height",resizeIdWidth);
         resizecollapsed = resize.getBoundingClientRect();
         $(resize).addClass('transition');
-        transform(resize, resizecollapsed, resizeexpanded);
 
         $(right).css("width",halfWindowWidth);
         rightcollapsed = right.getBoundingClientRect();
@@ -98,6 +97,8 @@ $(function(){
         $(right).css("left",resizeIdWidth);
         rightexpanded = right.getBoundingClientRect();
         $(right).addClass('transition');
+        
+        transform(resize, resizecollapsed, resizeexpanded);
         transform(right, rightcollapsed, rightexpanded);
         
         $('#main-menu ul li').css("animation-play-state","running");
