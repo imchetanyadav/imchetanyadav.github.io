@@ -43,11 +43,11 @@ $(function(){
     /* Adjust Stylesheet based on screensize */
     function adjustStyle(width){
         if(width<701){
-            $('#screen-stylesheet').attr("href","css/smallscreen.css");
+            $('#screen-stylesheet').attr("href","css/smallscreen.min.css");
             $('#resize').addClass("animation-element");
         }
         else{
-            $('#screen-stylesheet').attr("href","css/largescreen.css");
+            $('#screen-stylesheet').attr("href","css/largescreen.min.css");
             $('#resize').removeClass("animation-element");
             if(content)
                 $(right).css("width",contentWidth);
