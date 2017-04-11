@@ -14,6 +14,11 @@
          "name": "<h3>Appointment System</h3> <br> Online appointment system for teacher and students with search and chat functionality<br>View <a href='https://imchetanyadav.github.io/AppointmentSystem/' target='_blank'>Live Version</a> or <a href='https://github.com/imchetanyadav/AppointmentSystem' target='_blank'>Source Code</a>",
          "imgPath": "images/projects/appoint.png",
          "imgPathHR": "images/projects/appointBR.png"
+     },
+      {
+         "name": "<h3>QnA System for Wordpress</h3> <br> Question and Answer system for wordpress<br>View <a href='https://www.decipherias.com/quiz' target='_blank'>Live Version</a> or <a href='https://github.com/imchetanyadav/QnA-for-Wordpress' target='_blank'>Source Code</a>",
+         "imgPath": "images/projects/qna.png",
+         "imgPathHR": "images/projects/qnaBR.png"
      }
   ]
 }
